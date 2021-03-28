@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script type="text/javascript">
+      function add()
+      {
+        var a,b,c;
+        a=Number(document.getElementById("one").value);
+        b=Number(document.getElementById("two").value);
+        c=a+b;
+        document.getElementById("ans").value=c;   
+      }
+      function sub()
+      {
+        var a,b,c;
+        a=Number(document.getElementById("one").value);
+        b=Number(document.getElementById("two").value);
+        c=a-b;
+        document.getElementById("ans").value=c;   
+      }
+      function mul()
+      {
+        var a,b,c;
+        a=Number(document.getElementById("one").value);
+        b=Number(document.getElementById("two").value);
+        c=a*b;
+        document.getElementById("ans").value=c;   
+      }
+      function div()
+      {
+        var a,b,c;
+        a=Number(document.getElementById("one").value);
+        b=Number(document.getElementById("two").value);
+        c=a/b;
+        document.getElementById("ans").value=c;   
+      }
+      function mod()
+      {
+        var a,b,c;
+        a=Number(document.getElementById("one").value);
+        b=Number(document.getElementById("two").value);
+        c=a%b;
+        document.getElementById("ans").value=c;   
+      }
+      function power()
+      {
+        var a,b,c;
+        a=Number(document.getElementById("one").value);
+        b=Number(document.getElementById("two").value);
+        c=a**b;
+        document.getElementById("ans").value=c;   
+      }
+    </script>
+    <style>
+    #input
+    {
+      background-color:yellow;
+      color:red;
+      border-radius:0 10px 0 10px;
+      box-shadow:0 0 20px red;
+    }
+    #output
+    {
+      background-color:pink;
+      color:black;
+      border-radius:0 10px 0 10px;
+      box-shadow:0 0 20px red;
+    }
+    #pl
+    {
+      background-color:orange;
+      color:green;
+      border-radius:10px;
+    }
+    #sb
+    {
+      background-color:red;
+      color:blue;
+      border-radius:10px;
+    }
+    #ml
+    {
+      background-color:darkgreen;
+      color:orange;
+      border-radius:10px;
+    }
+    #dv
+    {
+      background-color:black;
+      color:green;
+      border-radius:10px;
+    }
+    #md
+    {
+      background-color:cyan;
+      color:red;
+      border-radius:10px;
+    }
+    #pw
+    {
+      background-color:lime;
+      color:gray;
+      border-radius:10px;
+    }
+  </style>
+  </head>
+  <body background="maths.jpg">
+    <div style="background-color:cyan;margin:100px;box-shadow:0 0 40px blue;border-radius:20px;">
+    <h1 align="center" style="font-family:Arial;color:salmon;">CALCULATOR</h1>
+    <form>
+    <table border="7" cellpadding="10" cellspacing="20" align="center" style="border:5px inset blue;">
+      <td id="input">
+      <label><u>Input : </u></label><br>
+      <label>Number 1 : </label>
+      <input type="number" id="one" style="border-radius:0 10px 0 10px;"><br>
+      <label>Number 2 : </label>
+      <input type="number" id="two" style="border-radius:0 10px 0 10px;"><br>
+    </td><br>
+    <td id="output">
+      <label><u>Output : </u></label><br>
+      <input type="button" id="pl" value="+" onclick="add()">
+      <input type="button" id="sb" value="-" onclick="sub()">
+      <input type="button" id="ml" value="*" onclick="mul()">
+      <input type="button" id="dv" value="/" onclick="div()">
+      <input type="button" id="md" value="%" onclick="mod()">
+      <input type="button" id="pw" value="pow" onclick="power()">
+      <input type="text" id="ans" readonly>
+    </td> 
+  </table>
+</form>
+</div>
+  </body>
+</html>
