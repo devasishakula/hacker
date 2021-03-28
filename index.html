@@ -57,15 +57,30 @@
     {
       background-color:yellow;
       color:red;
-      border-radius:0 10px 0 10px;
+      border-radius:20px;
+      padding: 10px;
       box-shadow:0 0 20px red;
+      border:none;
+      outline: none;
+      margin-bottom: 10px;
+    }
+    input
+    {
+      border-radius:20px;
+      padding: 10px;
+      border:none;
+      outline: none;
+      margin-bottom: 10px;
     }
     #output
     {
       background-color:pink;
       color:black;
-      border-radius:0 10px 0 10px;
+      border-radius:20px;
+      padding: 10px;
       box-shadow:0 0 20px red;
+      border:none;
+      outline:none;
     }
     #pl
     {
@@ -93,7 +108,7 @@
     }
     #md
     {
-      background-color:cyan;
+      background-color:darkslategray;
       color:red;
       border-radius:10px;
     }
@@ -103,6 +118,25 @@
       color:gray;
       border-radius:10px;
     }
+    #reset
+    {
+      text-align: center;
+      background: linear-gradient(45deg,orange,green,blue);
+      box-shadow: 0 0 10px red;
+      border: none;
+    }
+    input[type="number"]:hover,input[type="text"]:hover,input[type="reset"]:hover
+    {
+      background-color: cyan;
+    }
+    input[type="reset"]
+    {
+      color:red;
+    }
+    ::placeholder
+    {
+      color:red;
+    }
   </style>
   </head>
   <body background="maths.jpg">
@@ -110,23 +144,27 @@
     <h1 align="center" style="font-family:Arial;color:salmon;">CALCULATOR</h1>
     <form>
     <table border="7" cellpadding="10" cellspacing="20" align="center" style="border:5px inset blue;">
-      <td id="input">
-      <label><u>Input : </u></label><br>
-      <label>Number 1 : </label>
-      <input type="number" id="one" style="border-radius:0 10px 0 10px;"><br>
-      <label>Number 2 : </label>
-      <input type="number" id="two" style="border-radius:0 10px 0 10px;"><br>
+      <tr>
+    <td id="input">
+      <input type="number" id="one" placeholder="Number 1"><br>
+      <input type="number" id="two" placeholder="Number 2"><br>
     </td><br>
     <td id="output">
-      <label><u>Output : </u></label><br>
       <input type="button" id="pl" value="+" onclick="add()">
       <input type="button" id="sb" value="-" onclick="sub()">
       <input type="button" id="ml" value="*" onclick="mul()">
       <input type="button" id="dv" value="/" onclick="div()">
       <input type="button" id="md" value="%" onclick="mod()">
       <input type="button" id="pw" value="pow" onclick="power()">
-      <input type="text" id="ans" readonly>
+      <label>=</label>
+      <input type="text" id="ans" readonly placeholder="Result">
     </td> 
+    </tr>
+    <tr>
+      <td colspan="2" id="reset">
+        <input type="reset">
+      </td>
+    </tr>
   </table>
 </form>
 </div>
